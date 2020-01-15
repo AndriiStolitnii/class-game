@@ -44,18 +44,18 @@ var BattleGround = (function() {
     this.element.appendChild(el);
   };
 
-  // BattleGround.prototype.update = function() {
-  //   var self = this;
-  //   this.cellsElement.innerHTML = '';
-  //   this.area.forEach(function(el) {
-  //     var cell = document.createElement('div');
-  //     var cellElement = el.render();
+  BattleGround.prototype.update = function() {
+    var self = this;
+    this.cellsElement.innerHTML = '';
+    this.area.forEach(function(el) {
+      var cell = document.createElement('div');
+      var cellElement = el.render();
 
-  //     cell.classList.add('game__cells__item');
-  //     cell.appendChild(cellElement);
-  //     self.cellsElement.appendChild(cell);
-  //   });
-  // };
+      cell.classList.add('game__cells__item');
+      cell.appendChild(cellElement);
+      self.cellsElement.appendChild(cell);
+    });
+  };
 
   return BattleGround;
 })();
